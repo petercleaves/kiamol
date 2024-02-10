@@ -14,6 +14,10 @@ spec:
       containers:
         - name: sleep
           image: kiamol/ch03-sleep
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"    
           env:
           - name: KIAMOL_CHAPTER
             value: "04"

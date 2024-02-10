@@ -27,6 +27,12 @@ spec:
         - name: db
           image: postgres:11.6-alpine
           env:
+          - name: ADMINER_DEFAULT_SERVER
+            valueFrom:
+              secretKeyRef:
+                name: issasecret
+                key: ADMINER_DEFAULT_SERVER
+                
           - name: POSTGRES_PASSWORD_FILE
             value: /db-secrets/password
           volumeMounts:

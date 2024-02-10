@@ -27,3 +27,9 @@ spec:
         - name: web
           image: adminer:4.7-standalone
           args: ["php", "-S", "0.0.0.0:8080", "-t", "/var/www/html"]
+          env:
+          - name: ADMINER_DEFAULT_SERVER
+            valueFrom:
+              secretKeyRef:
+                name: issasecret
+                key: ADMINER_DEFAULT_SERVER
