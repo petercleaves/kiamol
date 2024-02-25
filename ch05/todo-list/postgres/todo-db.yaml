@@ -44,4 +44,4 @@ spec:
               path: postgres_password
         - name: data
           persistentVolumeClaim:
-            claimName: postgres-pvc
+            claimName: postgres-pvc3
